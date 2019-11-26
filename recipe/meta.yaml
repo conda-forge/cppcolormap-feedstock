@@ -7,25 +7,19 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/tdegeus/cppcolormap/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
     - make  # [unix]
-  host:
-    - python
-    - pip
-    - setuptools
-    - pyxtensor
   run:
-    - python
+    - xtensor
 
 test:
   commands:
