@@ -7,9 +7,9 @@ Package license: GPL3
 
 Feedstock license: BSD 3-Clause
 
-Summary: Library with colormaps for C++/Python.
+Summary: Library with colormaps.
 
-Library with colormaps for C++/Python.
+Library with colormaps.
 
 Current build status
 ====================
