@@ -1,5 +1,5 @@
-About cppcolormap
-=================
+About cppcolormap-split
+=======================
 
 Home: https://github.com/tdegeus/cppcolormap
 
@@ -11,7 +11,7 @@ Summary: Library with colormaps.
 
 Development: https://github.com/tdegeus/cppcolormap
 
-Documentation: https://github.com/tdegeus/cppcolormap
+Documentation: https://tdegeus.github.io/cppcolormap
 
 Library with colormaps.
 
@@ -74,21 +74,22 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cppcolormap-green.svg)](https://anaconda.org/conda-forge/cppcolormap) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cppcolormap.svg)](https://anaconda.org/conda-forge/cppcolormap) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cppcolormap.svg)](https://anaconda.org/conda-forge/cppcolormap) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cppcolormap.svg)](https://anaconda.org/conda-forge/cppcolormap) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-python--cppcolormap-green.svg)](https://anaconda.org/conda-forge/python-cppcolormap) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/python-cppcolormap.svg)](https://anaconda.org/conda-forge/python-cppcolormap) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/python-cppcolormap.svg)](https://anaconda.org/conda-forge/python-cppcolormap) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-cppcolormap.svg)](https://anaconda.org/conda-forge/python-cppcolormap) |
 
-Installing cppcolormap
-======================
+Installing cppcolormap-split
+============================
 
-Installing `cppcolormap` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `cppcolormap-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cppcolormap` can be installed with:
+Once the `conda-forge` channel has been enabled, `cppcolormap, python-cppcolormap` can be installed with:
 
 ```
-conda install cppcolormap
+conda install cppcolormap python-cppcolormap
 ```
 
 It is possible to list all of the versions of `cppcolormap` available on your platform with:
@@ -101,7 +102,8 @@ conda search cppcolormap --channel conda-forge
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -136,17 +138,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating cppcolormap-feedstock
-==============================
+Updating cppcolormap-split-feedstock
+====================================
 
-If you would like to improve the cppcolormap recipe or build a new
+If you would like to improve the cppcolormap-split recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/cppcolormap-feedstock are
+Note that all branches in the conda-forge/cppcolormap-split-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
