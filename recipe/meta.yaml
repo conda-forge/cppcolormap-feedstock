@@ -1,6 +1,6 @@
 {% set org = "tdegeus" %}
 {% set name = "cppcolormap" %}
-{% set version = "1.4.3" %}
+{% set version = "1.4.4" %}
 
 package:
   name: {{ name|lower }}-split
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 81c82c4bbf23af8e975df3b78d72a11f1ce22ce587abcb4203ff17be57c5cd8f
+  sha256: 76af65c167cec0574fb6029da3b49b05ef552aec74abc910ab00de114ef61a3d
 
 build:
   number: 0
