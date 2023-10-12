@@ -36,7 +36,7 @@ outputs:
         - test -f ${PREFIX}/include/cppcolormap.h  # [unix]
         - test -f ${PREFIX}/lib/cmake/cppcolormap/cppcolormapConfig.cmake  # [unix]
         - if not exist %LIBRARY_PREFIX%\include\cppcolormap.h exit 1  # [win]
-        - if not exist %LIBRARY_PREFIX%\lib\cmake\cppcolormapConfig.cmake exit 1  # [win]
+        - if not exist %LIBRARY_PREFIX%\lib\cmake\cppcolormap\cppcolormapConfig.cmake exit 1  # [win]
 
   - name: python-cppcolormap
 
