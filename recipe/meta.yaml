@@ -1,21 +1,19 @@
-{% set org = "tdegeus" %}
-{% set name = "cppcolormap" %}
-{% set version = "1.4.4" %}
+{% set version = "1.4.5" %}
 
 package:
-  name: {{ name|lower }}-split
+  name: cppcolormap-split
   version: {{ version }}
 
 source:
-  url: https://github.com/{{ org }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 76af65c167cec0574fb6029da3b49b05ef552aec74abc910ab00de114ef61a3d
+  url: https://github.com/tdegeus/cppcolormap/archive/v{{ version }}.tar.gz
+  sha256: 6cc8e43991cefd0c67d33b7992fd3edf474d7101fd838b98dc7aafdfbbb2b5e6
 
 build:
-  number: 2
+  number: 0
 
 outputs:
 
-  - name: {{ name|lower }}
+  - name: cppcolormap
 
     script: install.sh  # [unix]
     script: install.bat  # [win]
@@ -35,12 +33,12 @@ outputs:
 
     test:
       commands:
-        - test -f ${PREFIX}/include/{{ name }}.h  # [unix]
-        - test -f ${PREFIX}/lib/cmake/{{ name }}/{{ name }}Config.cmake  # [unix]
-        - if exist %LIBRARY_PREFIX%\include\{{ name }}.h (exit 0) else (exit 1)  # [win]
-        - if exist %LIBRARY_PREFIX%\lib\cmake\{{ name }}Config.cmake (exit 0) else (exit 1)  # [win]
+        - test -f ${PREFIX}/include/cppcolormap.h  # [unix]
+        - test -f ${PREFIX}/lib/cmake/cppcolormap/cppcolormapConfig.cmake  # [unix]
+        - if not exist %LIBRARY_PREFIX%\include\cppcolormap.h exit 1  # [win]
+        - if not exist %LIBRARY_PREFIX%\lib\cmake\cppcolormapConfig.cmake exit 1  # [win]
 
-  - name: python-{{ name|lower }}
+  - name: python-cppcolormap
 
     script: install_python.sh  # [unix]
     script: install_python.bat  # [win]
@@ -75,22 +73,22 @@ outputs:
 
     test:
       imports:
-        - {{ name }}
+        - cppcolormap
       commands:
         - pip check
-        - python -c "import {{ name }}; assert {{ name }}.version() == '{{ version }}'"
+        - python -c "import cppcolormap; assert cppcolormap.version() == '{{ version }}'"
       requires:
         - pip
 
 about:
-  home: https://github.com/{{ org }}/{{ name }}
+  home: https://github.com/tdegeus/cppcolormap
   license: GPL-3.0-or-later
   license_family: GPL3
   license_file: LICENSE
   summary: Library with colormaps.
   description: Library with colormaps.
-  doc_url: https://{{ org }}.github.io/{{ name }}
-  dev_url: https://github.com/{{ org }}/{{ name }}
+  doc_url: https://tdegeus.github.io/cppcolormap
+  dev_url: https://github.com/tdegeus/cppcolormap
 
 extra:
   recipe-maintainers:
